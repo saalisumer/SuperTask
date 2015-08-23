@@ -39,6 +39,10 @@
 		707E52241B89F59B0019AC56 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E52231B89F59B0019AC56 /* Image.m */; };
 		707E52271B89F59B0019AC56 /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E52261B89F59B0019AC56 /* Bookmark.m */; };
 		707E522A1B89FB080019AC56 /* RandomSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E52291B89FB080019AC56 /* RandomSuggestionViewController.m */; };
+		707E522D1B8A04FB0019AC56 /* BookmarksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E522C1B8A04FB0019AC56 /* BookmarksViewController.m */; };
+		707E52301B8A05C50019AC56 /* BookmarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E522F1B8A05C50019AC56 /* BookmarkCell.m */; };
+		707E52331B8A0E460019AC56 /* ShareUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E52321B8A0E460019AC56 /* ShareUtility.m */; };
+		707E52361B8A134E0019AC56 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 707E52351B8A134E0019AC56 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,14 @@
 		707E52261B89F59B0019AC56 /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookmark.m; sourceTree = "<group>"; };
 		707E52281B89FB080019AC56 /* RandomSuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomSuggestionViewController.h; sourceTree = "<group>"; };
 		707E52291B89FB080019AC56 /* RandomSuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomSuggestionViewController.m; sourceTree = "<group>"; };
+		707E522B1B8A04FB0019AC56 /* BookmarksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarksViewController.h; sourceTree = "<group>"; };
+		707E522C1B8A04FB0019AC56 /* BookmarksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarksViewController.m; sourceTree = "<group>"; };
+		707E522E1B8A05C50019AC56 /* BookmarkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkCell.h; sourceTree = "<group>"; };
+		707E522F1B8A05C50019AC56 /* BookmarkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkCell.m; sourceTree = "<group>"; };
+		707E52311B8A0E460019AC56 /* ShareUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtility.h; sourceTree = "<group>"; };
+		707E52321B8A0E460019AC56 /* ShareUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUtility.m; sourceTree = "<group>"; };
+		707E52341B8A134E0019AC56 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		707E52351B8A134E0019AC56 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +260,8 @@
 				707E51F41B89D58B0019AC56 /* ShirtPantSelectorViewController.m */,
 				707E52281B89FB080019AC56 /* RandomSuggestionViewController.h */,
 				707E52291B89FB080019AC56 /* RandomSuggestionViewController.m */,
+				707E522B1B8A04FB0019AC56 /* BookmarksViewController.h */,
+				707E522C1B8A04FB0019AC56 /* BookmarksViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -257,6 +271,8 @@
 			children = (
 				707E51F61B89DAB80019AC56 /* ShirtPantSelectionCell.h */,
 				707E51F71B89DAB80019AC56 /* ShirtPantSelectionCell.m */,
+				707E522E1B8A05C50019AC56 /* BookmarkCell.h */,
+				707E522F1B8A05C50019AC56 /* BookmarkCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -264,6 +280,8 @@
 		707E521F1B89F37D0019AC56 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				707E52341B8A134E0019AC56 /* MBProgressHUD.h */,
+				707E52351B8A134E0019AC56 /* MBProgressHUD.m */,
 				707E521B1B89DEC10019AC56 /* ELCPicker */,
 				707E51E91B89CF0D0019AC56 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
 				707E51EA1B89CF0D0019AC56 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
@@ -276,6 +294,8 @@
 			children = (
 				707E51F01B89D4560019AC56 /* ShirtPantManager.h */,
 				707E51F11B89D4560019AC56 /* ShirtPantManager.m */,
+				707E52311B8A0E460019AC56 /* ShareUtility.h */,
+				707E52321B8A0E460019AC56 /* ShareUtility.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -398,17 +418,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				707E51FB1B89DE870019AC56 /* ELCAlbumPickerController.m in Sources */,
+				707E52301B8A05C50019AC56 /* BookmarkCell.m in Sources */,
+				707E52361B8A134E0019AC56 /* MBProgressHUD.m in Sources */,
 				707E520D1B89DE980019AC56 /* ELCAssetTablePicker.m in Sources */,
 				707E520F1B89DE980019AC56 /* ELCImagePickerController.m in Sources */,
 				707E522A1B89FB080019AC56 /* RandomSuggestionViewController.m in Sources */,
 				707E52271B89F59B0019AC56 /* Bookmark.m in Sources */,
 				707E520E1B89DE980019AC56 /* ELCConsole.m in Sources */,
 				707E52101B89DE980019AC56 /* ELCOverlayImageView.m in Sources */,
+				707E52331B8A0E460019AC56 /* ShareUtility.m in Sources */,
 				707E51F21B89D4560019AC56 /* ShirtPantManager.m in Sources */,
 				707E51BB1B88BFBA0019AC56 /* AppDelegate.m in Sources */,
 				707E51B81B88BFBA0019AC56 /* main.m in Sources */,
 				707E520B1B89DE980019AC56 /* ELCAsset.m in Sources */,
 				707E520C1B89DE980019AC56 /* ELCAssetCell.m in Sources */,
+				707E522D1B8A04FB0019AC56 /* BookmarksViewController.m in Sources */,
 				707E51F51B89D58B0019AC56 /* ShirtPantSelectorViewController.m in Sources */,
 				707E52241B89F59B0019AC56 /* Image.m in Sources */,
 				707E51BE1B88BFBB0019AC56 /* SuperTask.xcdatamodeld in Sources */,

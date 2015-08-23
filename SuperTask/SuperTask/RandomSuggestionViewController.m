@@ -17,6 +17,8 @@
     ShirtPantManager * manager;
     Image * mShirtImage;
     Image * mPantImage;
+    
+    BOOL    mInitializationDone;
 }
 @end
 
@@ -31,7 +33,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self setRandomShirtPant];
+    if (mInitializationDone == NO) {
+        [self setRandomShirtPant];
+        mInitializationDone = YES;
+    }
 }
 
 - (void)setRandomShirtPant

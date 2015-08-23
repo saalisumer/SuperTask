@@ -11,6 +11,7 @@
 #import "ELCImagePickerController.h"
 #import "ShirtPantManager.h"
 #import "Constants.h"
+#import "RootViewController.h"
 
 @interface ShirtPantSelectorViewController ()<ELCImagePickerControllerDelegate,UIImagePickerControllerDelegate>
 {
@@ -69,15 +70,24 @@
     }
     else
     {
-        ShirtPantManager * shirtPantManager = [ShirtPantManager instance ];
-        [shirtPantManager saveShirts:shirtsArray andPants:pantsArray];
-
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setBool:YES forKey:kShirtPantCollectionInitialized];
-        [userDefaults synchronize];
+        [[RootViewController instance].mHUD show:YES];
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self performSelector:@selector(saveAllShirtsAndPantsToDB) withObject:nil afterDelay:0.0];
     }
+}
+
+-(void)saveAllShirtsAndPantsToDB
+{
+    ShirtPantManager * shirtPantManager = [ShirtPantManager instance ];
+    [shirtPantManager saveShirts:shirtsArray andPants:pantsArray];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setBool:YES forKey:kShirtPantCollectionInitialized];
+    [userDefaults synchronize];
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[RootViewController instance].mHUD hide:YES];
+    }];
 }
 
 - (void)presentCameraPicker

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 @interface LoginViewController ()<FBSDKLoginButtonDelegate>
 
 @end
@@ -16,15 +17,35 @@
 
 
 - (void)viewDidLoad {
+    [self configureView];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)configureView
+{
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     // Optional: Place the button in the center of your view.
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        self.lblName.hidden = NO;
+            [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
+             startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+                 if (!error) {
+                     self.lblName.text = [result valueForKey:@"name"];
+                 }
+             }];
+    }
+    else
+    {
+        self.lblName.hidden = YES;
+    }
+    
     loginButton.delegate = self;
     loginButton.center = self.view.center;
     loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
     [self.view addSubview:loginButton];
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,7 +69,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton
 {
-    
+    [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

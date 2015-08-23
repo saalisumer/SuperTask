@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController
-
+@property (nonatomic, weak) IBOutlet UILabel * lblName;
 @end

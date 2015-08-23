@@ -17,10 +17,23 @@
 @interface RootViewController ()
 
 @end
-
+static RootViewController *singletonInstance = nil;
 @implementation RootViewController
++ (RootViewController *) instance {
+    @synchronized(self) {
+        if(!singletonInstance) {
+            singletonInstance =  [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ROOT_VC"];
+        }
+    }
+    
+    return singletonInstance;
+    
+}
 
 - (void)viewDidLoad {
+    mHUD = [[MBProgressHUD alloc]initWithView:self.view];
+    [self.view addSubview:mHUD];
+    [mHUD hide:YES];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -40,8 +53,8 @@
         }
         else
         {
-            RandomSuggestionViewController * randomSuggestionVC =  [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"RANDOM_SUGGESTION_VC"];
-            [self presentViewController:randomSuggestionVC animated:YES completion:nil];
+            UITabBarController * tabBar =  [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"TAB_BAR_VC"];
+            [self presentViewController:tabBar animated:YES completion:nil];
         }
     }
     else

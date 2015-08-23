@@ -136,7 +136,7 @@ static ShirtPantManager *singletonInstance = nil;
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Image"  inManagedObjectContext: self.context];
     [fetch setEntity:entityDescription];
-    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(ANY imageType contains[cd] %@)",kImageTypeShirt]];
+    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(ANY imageType contains %@)",kImageTypeShirt]];
     NSError * error = nil;
     fetchedObjects = [self.context executeFetchRequest:fetch error:&error];
     
@@ -155,7 +155,7 @@ static ShirtPantManager *singletonInstance = nil;
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Image"  inManagedObjectContext: self.context];
     [fetch setEntity:entityDescription];
-    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(ANY imageType contains[cd] %@)",kImageTypePant]];
+    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(ANY imageType contains %@)",kImageTypePant]];
     NSError * error = nil;
     fetchedObjects = [self.context executeFetchRequest:fetch error:&error];
     
