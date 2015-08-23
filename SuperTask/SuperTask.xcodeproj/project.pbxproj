@@ -148,8 +148,6 @@
 		707E51A91B88BFBA0019AC56 = {
 			isa = PBXGroup;
 			children = (
-				707E51EE1B89D0460019AC56 /* MobileCoreServices.framework */,
-				707E51EC1B89CF460019AC56 /* AssetsLibrary.framework */,
 				707E51B41B88BFBA0019AC56 /* SuperTask */,
 				707E51D11B88BFBB0019AC56 /* SuperTaskTests */,
 				707E51B31B88BFBA0019AC56 /* Products */,
@@ -168,18 +166,17 @@
 		707E51B41B88BFBA0019AC56 /* SuperTask */ = {
 			isa = PBXGroup;
 			children = (
+				707E52371B8A38D00019AC56 /* AppDelegate */,
 				707E52211B89F4190019AC56 /* Model */,
-				707E52201B89F3FB0019AC56 /* Utility */,
-				707E521F1B89F37D0019AC56 /* ThirdParty */,
 				707E521E1B89F3780019AC56 /* View */,
 				707E521D1B89F3720019AC56 /* ViewControllers */,
+				707E52201B89F3FB0019AC56 /* Utility */,
+				707E521F1B89F37D0019AC56 /* ThirdParty */,
 				707E51DE1B8922780019AC56 /* Frameworks */,
-				707E51B91B88BFBA0019AC56 /* AppDelegate.h */,
-				707E51BA1B88BFBA0019AC56 /* AppDelegate.m */,
+				707E521C1B89F26B0019AC56 /* Constants.h */,
 				707E51C51B88BFBB0019AC56 /* Images.xcassets */,
 				707E51C71B88BFBB0019AC56 /* LaunchScreen.xib */,
 				707E51B51B88BFBA0019AC56 /* Supporting Files */,
-				707E521C1B89F26B0019AC56 /* Constants.h */,
 			);
 			path = SuperTask;
 			sourceTree = "<group>";
@@ -213,6 +210,8 @@
 		707E51DE1B8922780019AC56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				707E51EE1B89D0460019AC56 /* MobileCoreServices.framework */,
+				707E51EC1B89CF460019AC56 /* AssetsLibrary.framework */,
 				707E51E11B8922A60019AC56 /* FBSDKLoginKit.framework */,
 				707E51DF1B8922860019AC56 /* FBSDKCoreKit.framework */,
 			);
@@ -251,7 +250,6 @@
 		707E521D1B89F3720019AC56 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				707E51C21B88BFBB0019AC56 /* Main.storyboard */,
 				707E51E61B89CC170019AC56 /* RootViewController.h */,
 				707E51E71B89CC170019AC56 /* RootViewController.m */,
 				707E51E31B89CB690019AC56 /* LoginViewController.h */,
@@ -269,6 +267,7 @@
 		707E521E1B89F3780019AC56 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				707E51C21B88BFBB0019AC56 /* Main.storyboard */,
 				707E51F61B89DAB80019AC56 /* ShirtPantSelectionCell.h */,
 				707E51F71B89DAB80019AC56 /* ShirtPantSelectionCell.m */,
 				707E522E1B8A05C50019AC56 /* BookmarkCell.h */,
@@ -280,11 +279,9 @@
 		707E521F1B89F37D0019AC56 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				707E52341B8A134E0019AC56 /* MBProgressHUD.h */,
-				707E52351B8A134E0019AC56 /* MBProgressHUD.m */,
+				707E52381B8A39380019AC56 /* MBProgressHUD */,
 				707E521B1B89DEC10019AC56 /* ELCPicker */,
-				707E51E91B89CF0D0019AC56 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
-				707E51EA1B89CF0D0019AC56 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+				707E52391B8A39430019AC56 /* ALAssetsLibrary+CustomPhotoAlbum */,
 			);
 			name = ThirdParty;
 			sourceTree = "<group>";
@@ -310,6 +307,33 @@
 				707E51BC1B88BFBB0019AC56 /* SuperTask.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		707E52371B8A38D00019AC56 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				707E51B91B88BFBA0019AC56 /* AppDelegate.h */,
+				707E51BA1B88BFBA0019AC56 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		707E52381B8A39380019AC56 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				707E52341B8A134E0019AC56 /* MBProgressHUD.h */,
+				707E52351B8A134E0019AC56 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		707E52391B8A39430019AC56 /* ALAssetsLibrary+CustomPhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				707E51E91B89CF0D0019AC56 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				707E51EA1B89CF0D0019AC56 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+			);
+			name = "ALAssetsLibrary+CustomPhotoAlbum";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
