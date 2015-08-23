@@ -58,6 +58,13 @@
     if (mBookmarked == NO) {
         [manager addBookmarkShirt:mShirtImage andPant:mPantImage];
         mBookmarked = YES;
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"" message:@"The pair has been added to your bookmark list" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"" message:@"The pair has already been bookmarked" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
 }
 
