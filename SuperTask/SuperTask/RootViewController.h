@@ -10,9 +10,5 @@
 #import "MBProgressHUD.h"
 
 @interface RootViewController : UIViewController
-{
-    MBProgressHUD * mHUD;
-}
-@property (nonatomic, strong)MBProgressHUD * mHUD;
 + (RootViewController*)instance;
 @end

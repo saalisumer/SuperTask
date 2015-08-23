@@ -31,11 +31,7 @@ static RootViewController *singletonInstance = nil;
 }
 
 - (void)viewDidLoad {
-    mHUD = [[MBProgressHUD alloc]initWithView:self.view];
-    [self.view addSubview:mHUD];
-    [mHUD hide:YES];
-    
-    [super viewDidLoad];
+      [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 

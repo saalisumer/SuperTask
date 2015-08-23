@@ -18,6 +18,7 @@
     Image * mShirtImage;
     Image * mPantImage;
     
+    BOOL    mBookmarked;
     BOOL    mInitializationDone;
 }
 @end
@@ -54,7 +55,10 @@
 
 -(IBAction)didTapBookmark:(id)sender
 {
-    [manager addBookmarkShirt:mShirtImage andPant:mPantImage];
+    if (mBookmarked == NO) {
+        [manager addBookmarkShirt:mShirtImage andPant:mPantImage];
+        mBookmarked = YES;
+    }
 }
 
 -(IBAction)didTapDislike:(id)sender
@@ -64,6 +68,7 @@
 
 - (void)setShirt:(Image*)shirt andPant:(Image*)pant
 {
+    mBookmarked = NO;
     [UIView animateWithDuration:0.5 animations:^{
         self.shirtImageView.alpha = self.pantImageView.alpha = 0;
     }completion:^(BOOL finished) {

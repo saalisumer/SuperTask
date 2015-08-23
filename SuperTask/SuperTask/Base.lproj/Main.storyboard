@@ -279,12 +279,12 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W4R-1U-xhh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="159"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="W4R-1U-xhh">
+                                                            <rect key="frame" x="30" y="26" width="116" height="111"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="625-33-EfC">
-                                                            <rect key="frame" x="160" y="0.0" width="160" height="159"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="625-33-EfC">
+                                                            <rect key="frame" x="188" y="26" width="114" height="111"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
                                                     </subviews>

@@ -12,11 +12,13 @@
 #import "ShirtPantManager.h"
 #import "Constants.h"
 #import "RootViewController.h"
+#import "MBProgressHUD.h"
 
 @interface ShirtPantSelectorViewController ()<ELCImagePickerControllerDelegate,UIImagePickerControllerDelegate>
 {
     NSMutableArray * shirtsArray;
     NSMutableArray * pantsArray;
+    MBProgressHUD  * mHUD;
     
     BOOL isPickingPant;
 }
@@ -27,6 +29,11 @@
 - (void)viewDidLoad {
     shirtsArray = [[NSMutableArray alloc]init];
     pantsArray = [[NSMutableArray alloc]init];
+    
+    mHUD = [[MBProgressHUD alloc]initWithView:self.view];
+    [self.view addSubview:mHUD];
+    [mHUD hide:YES];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -70,7 +77,7 @@
     }
     else
     {
-        [[RootViewController instance].mHUD show:YES];
+        [mHUD show:YES];
         
         [self performSelector:@selector(saveAllShirtsAndPantsToDB) withObject:nil afterDelay:0.0];
     }
@@ -86,7 +93,7 @@
     [userDefaults synchronize];
     
     [self dismissViewControllerAnimated:YES completion:^{
-        [[RootViewController instance].mHUD hide:YES];
+        [mHUD hide:YES];
     }];
 }
 
